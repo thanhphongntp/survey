@@ -1,37 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, button {
+            display: block;
+            margin-top: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
 <body>
+    <h1>Survey: Do you like this app?</h1>
+    <form action="https://getform.io/f/bpjjllrb" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-<h2>Survey Form</h2>
+        <p>Do you like this app?</p>
+        <label>
+            <input type="radio" name="answer" value="Yes" required> Yes
+        </label>
+        <label>
+            <input type="radio" name="answer" value="No" required> No
+        </label>
 
-<form action="/submit_form.php" method="POST">
-  <label for="fname">First Name:</label><br>
-  <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><br><br>
-
-  <label for="lname">Last Name:</label><br>
-  <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br><br>
-
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
-
-  <label for="age">Age:</label><br>
-  <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter your age" required><br><br>
-
-  <label for="gender">Gender:</label><br>
-  <select id="gender" name="gender" required>
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-    <option value="other">Other</option>
-    <option value="prefer_not_to_say">Prefer not to say</option>
-  </select><br><br>
-
-  <label for="feedback">Feedback:</label><br>
-  <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Your comments..."></textarea><br><br>
-
-  <input type="submit" value="Submit">
-</form> 
-
-<p>Your responses will help us improve!</p>
-
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
